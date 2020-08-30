@@ -32,6 +32,7 @@ function startGame() {
 
   gameBox.classList.add('hidden');
   bgShadow.classList.add('hidden');
+  document.getElementById('start').play();
 
   if (document.querySelector('.main-content__notification--success')) {
     document.querySelector('.main-content__notification--success').remove();
@@ -103,6 +104,8 @@ function addResult() {
           'error'
         );
 
+        document.getElementById('error').play();
+
         return false;
 
       default:
@@ -156,6 +159,8 @@ function addResult() {
       `success`
     );
 
+    document.getElementById('success').play();
+
     attemptCount = 0;
     gameStarted = false;
 
@@ -183,6 +188,6 @@ function pushNotification(title, description, type) {
   document.body.append(message);
 
   if (type === 'error') {
-    setTimeout(() => message.remove(), 2000);
+    setTimeout(() => message.remove(), 3000);
   }
 }
