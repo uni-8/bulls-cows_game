@@ -1,7 +1,55 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "main-content";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 body {
-  background: $c-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: $mainFont;
+  line-height: 150%;
+  background: url("../images/background.jpg") center/cover no-repeat fixed;
+}
+
+.container {
+  position: relative;
+  width: 530px;
+  height: 530px;
+  padding: 15px 20px;
+  border: 5px solid $containerBorderColor;
+  border-radius: 10px;
+  background: $containerBgColor;
+  box-shadow: 0 0 6px 2px rgba(44,90,125,0.5);
+  -webkit-box-shadow: 0 0 6px 2px rgba(44,90,125,0.5);
+  -moz-box-shadow: 0 0 6px 2px rgba(44,90,125,0.5);
+  transition: all 0.3s ease-out;
+}
+
+.bg-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 1s ease-out;
+}
+
+.hidden {
+  opacity: 0;
 }

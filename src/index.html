@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Bulls & Cows</title>
+    <link
+      rel="icon"
+      href="images/favicon.png"
+      sizes="16x16"
+      type="image/png"
+    >
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <div class="bg-shadow"></div>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Bulls & Cows Game</h1>
+      </header>
+
+      <main class="main-content">
+        <section class="main-content__description">
+          <p>
+            I have a riddle for you.
+          </p>
+          <p>
+            Guess the <span class="main-content__attempt">4-digit</span> secret code.
+          </p>
+          <p>
+            Do not be afraid, I will not leave you in trouble, but I will give hints:
+          </p>
+          <ul>
+            <li>
+              if in your answer the number coincides with the number from the secret code and is in the same position, it is a <span class="main-content__right">bull</span>.
+            </li>
+            <li>
+              if the numbers match, but the position is different, it's a
+              <span class="main-content__almost">cow</span>.
+            </li>
+          </ul>
+          <p>
+            <strong>Example:</strong>
+            I thought of a number <span class="main-content__right">1234</span>, you entered
+            <span class="main-content__right">1</span><span class="main-content__almost">34</span><span class="main-content__fail">5</span>.
+            <br>
+            Result:
+            <span class="main-content__right">1 bull</span> (the unit is guessed in its place) and
+            <span class="main-content__almost">2 cows</span> (3 and 4 are present but not in their places).
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <button class="footer__start">
+          Good luck!
+        </button>
+      </footer>
+    </div>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
