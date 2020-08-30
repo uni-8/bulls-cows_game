@@ -33,8 +33,8 @@ function startGame() {
   gameBox.classList.add('hidden');
   bgShadow.classList.add('hidden');
 
-  if (document.querySelector('.success')) {
-    document.querySelector('.success').remove();
+  if (document.querySelector('.main-content__notification--success')) {
+    document.querySelector('.main-content__notification--success').remove();
   }
 
   function changeField() {
@@ -168,7 +168,7 @@ function addResult() {
 function pushNotification(title, description, type) {
   const message = document.createElement('div');
 
-  message.className = `main-content__notification`;
+  message.classList.add('main-content__notification');
   message.classList.add(`main-content__notification--${type}`);
 
   message.insertAdjacentHTML('afterbegin', `
