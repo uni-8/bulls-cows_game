@@ -38,11 +38,23 @@ function startGame() {
     document.querySelector('.main-content__notification--success').remove();
   }
 
-  function changeField() {
-    secretCode = Math.random().toString().slice(2, 6);
+  function getUniqueDigits() {
+    const set = new Set();
+    let digits = Math.random().toString().slice(2, 6);
 
-    // eslint-disable-next-line no-console
-    console.log(secretCode);
+    for (const d of digits) {
+      set.add(d);
+    }
+
+    if (set.size < 4) {
+      digits = getUniqueDigits();
+    }
+
+    return digits;
+  }
+
+  function changeField() {
+    secretCode = getUniqueDigits();
 
     button.innerHTML = buttonDescription;
     gameField.innerHTML = '';
@@ -97,7 +109,7 @@ function addResult() {
     switch (true) {
       case !value:
       case isNaN(+value):
-      case value.length !== 4:
+      case parseInt(value, 10).toString().length !== 4:
         pushNotification(
           'Wrong input!',
           'Enter 4 digits',

@@ -35,6 +35,9 @@
     border-radius: 5px;
     padding-left: 15px;
     overflow-y: scroll;
+    box-shadow: 0 0 10px 5px rgba(43,122,151,0.5)inset;
+    -webkit-box-shadow: 0 0 10px 5px rgba(43,122,151,0.5)inset;
+    -moz-box-shadow: 0 0 10px 5px rgba(43,122,151,0.5)inset;
   }
 
   &__input {
@@ -68,9 +71,9 @@
       color: $mainFontColor;
       border-color: $mainFontColor;
       background: rgba(245, 0, 96, 0.9);
-      box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.5);
-      -webkit-box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.5);
-      -moz-box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.5);
+      box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.7);
+      -webkit-box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.7);
+      -moz-box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.7);
     }
 
     &--success {
