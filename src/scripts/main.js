@@ -109,7 +109,8 @@ function addResult() {
     switch (true) {
       case !value:
       case isNaN(+value):
-      case parseInt(value, 10).toString().length !== 4:
+      case value.includes('.'):
+      case value.length !== 4:
         pushNotification(
           'Wrong input!',
           'Enter 4 digits',
