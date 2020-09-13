@@ -1,0 +1,90 @@
+.main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 65%;
+  color: $mainFontColor;
+
+  &__right {
+    color: $rightColor;
+    font-weight: bold;
+  }
+
+  &__almost {
+    color: $almostColor;
+    font-weight: bold;
+  }
+
+  &__fail {
+    color: $failColor;
+    font-weight: bold;
+  }
+
+  &__attempt {
+    color: $containerBorderColor;
+    font-weight: bold;
+  }
+
+  &__storage {
+    align-self: center;
+    margin: 5px;
+    width: 82%;
+    height: 70%;
+    border: 2px dashed $buttonTextColor;
+    border-radius: 5px;
+    padding-left: 15px;
+    overflow-y: scroll;
+    box-shadow: 0 0 10px 5px rgba(43,122,151,0.5)inset;
+    -webkit-box-shadow: 0 0 10px 5px rgba(43,122,151,0.5)inset;
+    -moz-box-shadow: 0 0 10px 5px rgba(43,122,151,0.5)inset;
+  }
+
+  &__input {
+    width: 45px;
+    outline: none;
+    font-family: $mainFont;
+    font-size: 15px;
+    color: $containerBorderColor;
+    background-color: $containerBgColor;
+    border: 1px solid $mainFontColor;
+    border-radius: 2px;
+  }
+
+  &__notification {
+    position: absolute;
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+
+    &--error {
+      top: calc(50% - 80px);
+      color: $mainFontColor;
+      border-color: $mainFontColor;
+      background: rgba(245, 0, 96, 0.9);
+      box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.7);
+      -webkit-box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.7);
+      -moz-box-shadow: 0 0 15px 4px rgba(103, 39, 86, 0.7);
+    }
+
+    &--success {
+      top: calc(50% - 115px);
+      font-weight: 200;
+      color: #f2fa02;
+      border-color: #f2fa02;
+      background: rgba(24, 169, 65, 0.9);
+      box-shadow: 0 0 15px 8px rgba(33, 105, 62, 0.5);
+      -webkit-box-shadow: 0 0 15px 8px rgba(33, 105, 62, 0.5);
+      -moz-box-shadow: 0 0 15px 8px rgba(33, 105, 62, 0.5);
+    }
+  }
+}

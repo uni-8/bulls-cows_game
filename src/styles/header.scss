@@ -1,0 +1,9 @@
+.header {
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    color: $titleColor;
+    line-height: 160%;
+    text-shadow: 1px 1px 3px rgba(103, 33, 131, 0.5);
+  }
+}

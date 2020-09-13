@@ -1,4 +1,4 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+# Bulls & Cows Game
+
+- Stack: JS, CSS3 (SCSS), HTML5, BEM
+- Click the link to see [DEMO](https://uni-8.github.io/bulls-cows_game/)
